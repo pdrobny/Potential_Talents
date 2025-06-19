@@ -29,15 +29,18 @@ Editor Used:  Google Colab
 Python Version:  3.11
 Python Packages:  pandas, numpy, matplotlib, seaborn, gdown, warnings, logging, pycaret, random, hyperopt, sklearn, duckdb, optuna, UMAP, T-SNE
 
-## Data
+## Data Description
+The data comes from the clients sourcing efforts. Any field that could directly reveal personal details was removed and each candidate was given a unique identifier. 
+
 Attributes:
-id : unique identifier for candidate (numeric)
 
-title : job title for candidate (text)
+- id: unique identifier for candidate (numeric)
 
-location : geographical location for candidate (text)
+- title: job title for candidate (text)
 
-screening_score: pre-determined score 0-100 (numeric)
+- location: geographical location for candidate (text)
+
+- screening_score: pre-determined score 0-100 (numeric)
 
 ## Methods  
 Data Collection and Preparation:  
