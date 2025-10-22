@@ -51,8 +51,8 @@ Modeling:
 -  Embedding Models: Word embedding models (tfidf, Word2Vec, GloVe, fasttext) were used to compare all candidates to a target candidate by calculating cosine similarity. This was also done using a sentence embedding model, Sentence BERT.
 -  Learn to Rank model:  A learn to rank model was created with PyTorch, RankNet and SentenceBert to compare all candidates to a target candidate. The output is a list of probabilities a candidate would rank lower than a target candidate.  Top candidates having a .50 probabilty of ranking lower and lower candidates approaching 1.0 probability of ranking lower.
 -  Starred Candidate ranking: Ranking system that uses SentenceBERT to compare candidates to a user inputed job title and optionally up to five user inputted or "starred" candidates.  If no starred candidates are selected the system will only compare to the inputted job title.
--  LLM(local model)Prompt Engineering:
--  LLMs (API) Prompt Engineering:  
+-  LLM(local model)Prompt Engineering: Evaluated Qwen3–0.6B, Llama-3.2–1B-Instruct, and gemma-3–1b-it. Gemma produced the best initial results and was instruction tuned and fine tuned with QLoRa to deliver the desired results.
+-  LLMs (API) Prompt Engineering:  Evaluated deepseek-r1-distill-llama-70b and llama-3.1–8b-instant accessed through Groq API.  On the first attempt deepseek-r1-distill-llama-70b produced the desired result.
 ## Conclusions
 Both word embedding and sentence embedding models can calculate cosine similarity to rank candidates. However, sentence embedding models—such as SentenceBERT—are more powerful because they capture the context and meaning of an entire sentence or, in this case, a job title. In contrast, word embedding models treat individual words as vectors. To compare job titles using word embeddings, additional code is required to compute the average vector representation for each title. For the goals of this project, SentenceBERT offers a more effective solution than word embedding models, as it provides richer semantic understanding with less manual effort. 
 
